@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+    <link rel="stylesheet" href="{% static 'css/sell_iphone.css' %}" type="text/css">
+    </head>
+    <body style="width: 100%; margin: 0; padding: 0; overflow-x: hidden; text-decoration: none;">
+        {% include 'navbar.html' %}
+        <div class="sell_iphone_wrapper">
+        <div class="text_1">Продати iPhone</div>
+        <div class="text_2">Ми приймаємо {{count}} моделей iPhone</div>
+            <section class="sell_iphone_wrappe_contaiher">
+                {% for iphon in iphone %}
+                <div class="sell_iphone_wrappe_contaiher_block">
+                    <img class='img_block' src="{{iphon.image_phone.url}}"></img>
+                    <a class="text" style="color: black;" href="{% url 'sell_iphone_page' iphon.id %}">{{iphon.model_produkt}}</a>
+                    <div class="price">{{iphon.text}} {{iphon.max_prise}}₴</div>
+                </div> 
+                {% endfor %}    
+            </section>
+        </div>
+    </body>
+</html>
+{% include 'info.html' %}
+{% include 'end_navbar.html' %}
+

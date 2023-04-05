@@ -1,0 +1,15 @@
+.section-contact{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 0px 60px 70px;
+}
+.title-telefoha{
+    margin: 20px 0px 20px 16px;
+    font-size: 20px;
+}
+.contact1{
+    margin-right: 200px;
+}
+.grafik-roboti{
+    margin: 45px 0px 0px 0px
+}

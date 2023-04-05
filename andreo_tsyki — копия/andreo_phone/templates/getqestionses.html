@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+<head>
+  <link rel="stylesheet" href="{% static 'css/qestionses.css' %}" type="text/css">
+
+</head>
+<body>
+  {% include 'navbar.html' %}
+  <div class="div">
+    <form method="post">
+        <div class="ded">
+          {% csrf_token %}
+          {% for field in form %}
+          <div class="help_text">
+            {{ field.help_text }}
+          </div>
+          <div class="qestion">
+            {{ field.label_tag}}
+          </div>
+          <div class="form-check">
+            {% for radio in field %}
+            {{ radio.tag }}
+            <div class="chack-button">
+            {{ radio.choice_label }}
+            </div>
+            {% endfor %}
+          </div>
+          {% endfor %}
+        </div>
+      <input type="submit" class="buttonn">
+    </form>
+  </div>  
+  {% if allowed == "submit" %}
+    <div class="next-block">
+      <h1> приблизна ціна вашого пристрою  {{ total_score }} ₴</h1>
+      <form action="{% url 'orderforsel' iphone.id %}"> 
+        <button class="button-next-block">оформити замовлення</button>
+      </form>
+    </div> 
+  {% endif %}
+</body> 
+{% include 'info.html' %}
+{% include 'end_navbar.html' %}
+{% endblock content %}

@@ -1,0 +1,318 @@
+.section{
+    display: grid;
+    grid-gap: 23px;
+    grid-template-columns: 340px 1fr;
+    padding: 30px 0px 0px 25px;
+}
+.set{
+    grid-template-columns: repeat(4,1fr);
+    display: grid;
+    gap: 23px;
+}
+.section1{
+    height: 400px;
+    width: 242px;
+    background-color: #f4f4f4;
+    border: 2px solid #f4f4f4;
+    filter: drop-shadow(0px 0px 10px rgb(183, 172, 172));
+    transition: 2s;
+    margin: 45px 0px 0px 70px;
+}
+.section1:hover{
+    transform: scale(1.1);
+    box-shadow: inset 0 0 15px 1px rgba(0,0,0,0.5);
+}
+.img{
+    height: 242px;
+    width: 240px;
+}
+.model{
+    font-size: large;
+    position: relative;
+    overflow: hidden;
+    padding: 11px 20px 11px 16px;
+}
+.models{
+    font-size: large;
+    position: relative;
+    overflow: hidden;
+    padding: 11px 20px 11px 16px;
+}
+.button{
+    height: 35px;
+    width: 250px;
+    margin: 35px 0px 0px 35px;
+    border: 1px solid black ;
+    border-color: #0B940E;
+    background: #ffffff;
+    color: #0B940E;
+    border-radius: 30px; 
+}
+.button:hover{
+    background-color: #0B940E;
+    color: #ffffff;
+    background-color: #0B940E;
+}
+.button1{
+    height: 30px;
+    width: 220px;
+    margin: 20px 0px 0px 10px;
+    border: 1px solid black ;
+    border-color: #0B940E;
+    background: #ffffff;
+    color: #0B940E;
+    border-radius: 30px;
+}
+.button1:hover{
+    background-color: #0B940E;
+    color: #ffffff;
+    background-color: #0B940E;
+}
+.ul{
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.sztah_price{
+    font-size: large;
+}
+.model-field{
+    padding: 10px 0px 10px 20px;
+}
+.membory {
+    display: none;
+    padding: 10px 0px 10px 20px;
+}
+.color{
+    display: none;
+    padding: 10px 0px 10px 20px;
+}
+.stan_telefohy{
+    display: none;
+    padding: 10px 0px 10px 20px;
+}
+.section3{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 75px 0px 40px 0px;
+    justify-content: center;
+}
+.btn{
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: rgb(204, 204, 204);
+    color:  black;
+    display: block;
+    width: fit-content;
+    margin: 10px;
+}
+.btn--primary{
+    background-color: #f4f4f4;
+    color: rgb(0, 0, 0);
+}
+.form_2{
+    display: flex; 
+    flex-wrap: wrap;
+}
+.h33{
+    padding: 0px 0px 20px 25px;
+}
+@media (max-width:1335px) {
+    .section1{
+        margin: 45px 0px 0px 50px ;
+    }
+}
+@media (max-width:1275px) {
+    .section1{
+        margin: 45px 0px 0px 30px;
+    }
+}
+@media (max-width:1215px) {
+    .section1{
+        margin: 45px 0px 0px 100px;
+    }
+}
+@media (max-width:1079px) {
+    .section1{
+        margin: 45px 0px 0px 70px;
+    }
+}
+@media (max-width:1020px) {
+    .section1{
+        margin: 45px 0px 0px 40px ;
+    }
+}
+@media (max-width:990px) {
+    .form{
+        width: 300px;
+    }
+    .form_2{
+        margin: 0px 0px 0px -60px;
+    }
+    .section1{
+        margin: 45px 0px 0px 60px; 
+    }
+}
+@media (max-width:939px) {
+    .section1{
+        margin: 45px 0px 0px 40px ;
+    }
+}
+@media (max-width:862px) {
+    .section1{
+        height: 322px;
+        width: 175px;
+        margin: 45px 0px 0px 50px;
+    }
+    .img{
+        height: 177px;
+        width: 175px;
+    }
+    .model{
+        font-size: 15px;
+    }
+    .sztah_price{
+        font-size: 14px;
+        margin: 0px 0px 0px -26px;
+    }
+    .button1{
+        width: 157px;
+    }
+}
+@media (max-width:785px) {
+    .section1{
+        margin: 45px 0px 0px 45px;
+    }
+    .form{
+        width: 240px;
+    }
+    .models{
+        font-size: 15px;
+    }
+    .model-field{
+        font-size: 14px;
+    }
+    .h33{
+        padding: 0px 0px 20px 0px;
+        font-size: 16px;
+    }
+    .button{
+        width: 200px;
+        margin: 35px 0px 0px 20px;
+    }
+    .form_2 {
+        margin: 0px 0px 0px -115px;
+    }
+}
+@media (max-width:720px) {
+    .section1{
+        margin: 45px 0px 0px 30px;
+    }
+    .form_2{
+        margin: -5px 0px 0px -130px;
+    }
+    .ul {
+        flex-wrap: wrap;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .form-column {
+        margin: 5px;
+    }
+    
+    .label {
+       font-size: 14px;
+    }
+    
+    .input {
+        font-size: 14px;
+        padding: 2px;
+    }
+    
+    .button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
+@media (max-width:675px) {
+    .form{
+        width: 200px;
+    }
+    .button{
+        width: 160px;
+        margin: 33px 0px 0px 15px; 
+    }
+    .h33{
+        font-size: 13px;
+    }
+    .form_2{
+        margin: -8px 0px 0px -170px;
+    }
+}
+@media (max-width:640px) {
+    .section{
+        padding: 30px 0px 0px 0px;
+        display: block;
+    }
+    .form{
+        width: 655px;
+    }
+    .h33{
+        font-size: 20px;
+    }
+    .diveses{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .models{
+        font-size: 20px;
+    }
+    .model-field{
+        font-size: 17px;
+        padding: 10px 0px 10px 40px;
+    }
+    .form_2{
+        margin: -8px 0px 0px -15px;
+    }
+    
+}
+@media (max-width:610px) {
+    .form_2{
+        margin: -8px 0px 0px 22px;
+    }
+    .section1{
+        margin: 45px 0px 0px 70px;
+    }
+}
+@media (max-width:520px) {
+    .form_2{
+        margin: -8px 0px 0px -20px;
+    }
+}
+@media (max-width:414px) {
+    .section1{
+        height: 290px;
+        width: 150px;
+        margin: 45px 0px 0px 50px;
+    }
+    .model{
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .sztah_price{
+        font-size: 13px;
+        margin: 0px 0px 0px -36px;
+    }
+    .button1{
+        width: 130px;
+    }
+    .img{
+        height: 153px;
+        width: 150px;
+    }
+}

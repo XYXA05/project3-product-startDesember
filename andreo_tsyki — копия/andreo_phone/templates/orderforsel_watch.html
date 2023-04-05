@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/order.css' %}" type="text/css">
+    </head>
+    <body style="width: 100%; margin: 0; padding: 0; overflow-x: hidden; text-decoration: none;">
+        {% include 'navbar.html' %}
+        <div class="div">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label class="name" for="{{ form.name.id_for_label }}">Имя продавца:</label>
+                    {% render_field form.name placeholder='BOGDAN' class="form-control" %}
+                </div>
+                <div class="form-group">
+                    <label class="name" for="{{ form.gmail.id_for_label }}">Электронная почта:</label>
+                    {% render_field form.gmail placeholder='bogdansavi05@gmail.com' class="form-control" %}
+                </div>
+                <div class="form-group">
+                    <label class="name" for="{{ form.phone_nomber.id_for_label }}">Номер телефона:</label>
+                    {% render_field form.phone_nomber placeholder='+38093198863456' class="form-control" %}
+                </div>
+                <div class="setka">
+                    <div class="form-group1">
+                        <label class="file" for="{{ form.image1.id_for_label }}">Фотографии к телефону 1:</label>
+                        {% render_field form.image1 class="form-control-file" %}
+                    </div>
+                    <div class="form-group1">
+                        <label class="file" for="{{ form.image2.id_for_label }}">Фотографии к телефону 2:</label>
+                        {% render_field form.image2 class="form-control-file" %}
+                    </div>
+                    <div class="form-group1">
+                        <label class="file" for="{{ form.image3.id_for_label }}">Фотографии к телефону 3:</label>
+                        {% render_field form.image3 class="form-control-file" %}
+                    </div>
+                    <div class="form-group1">
+                        <label class="file" for="{{ form.image4.id_for_label }}">Фотографии к телефону 4:</label>
+                        {% render_field form.image4 class="form-control-file" %}
+                    </div>
+                    <div class="form-group1">
+                        <label class="file" for="{{ form.image5.id_for_label }}">Фотографии к телефону 5:</label>
+                        {% render_field form.image5 class="form-control-file" %}
+                    </div>
+                    <div class="form-group1">
+                        <label class="file" for="{{ form.image6.id_for_label }}">Фотографии к телефону 6:</label>
+                        {% render_field form.image6 class="form-control-file" %}
+                    </div>
+                </div>
+                <input type="submit" value="Send" class="btn-primary">
+            </form>
+        </div>
+    </body>
+</html>
+{% include 'info.html' %}
+{% include 'end_navbar.html' %}
+{% endblock %}

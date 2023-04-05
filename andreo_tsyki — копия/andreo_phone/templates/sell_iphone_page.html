@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'css/sell_iphone_page.css' %}" type="text/css">
+  </head>
+  <body style="width: 100%; margin: 0; padding: 0; overflow-x: hidden; text-decoration: none;"> 
+    {% include 'navbar.html' %}
+    <div class="wraper_sell">
+      <div class="wraper_sell_in_line">
+        {% for iphono in iphones %}
+        <div class="wraper_sell_in_line_img_class">
+          <img class="wraper_sell_in_line_img" src="{{ iphono.image_phone_for_buy_bord.url }}">
+        </div>
+        <div class="wraper_sell_in_line_img_class1">
+          <div class="wraper_sell_in_line_title">Продати {{ iphono.model_produkt }}</div>
+          <div class="wraper_sell_in_line_title_ytochhite">Уточніть параметри пристрою</div>
+          <div class="wraper_sell_in_line_img_class2_blok">
+            <div class="black">
+              <div class="text-form">Ви знаєте всі паролі до Айклауду та телефону.Твій телефон може дзвонити з допомогою Української сім карти?</div>
+              <div class="div" id="hiddenDiv">
+                <input class="black-button" type="submit" name="answer" value="Да" onclick="toggleDiv()" >
+                <input class="black-button" type="submit" name="answer" value="Нет">
+              </div>   
+            </div>
+            <form style="display: none;" action="{% url 'getqestionses' iphono.id %}">
+              <button class="wraper_sell_in_line_img_class2_button">Наступний крок</button>
+            </form>      
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <script>
+      function toggleDiv() {
+      const div = document.querySelector('.wraper_sell_in_line_img_class2_blok');
+      const form = div.querySelector('form');
+      div.style.display = 'block';
+      form.style.display = 'block';
+    }
+    </script>  
+    <script>
+      const netButton = document.querySelector('.black-button[value="Нет"]');
+      netButton.addEventListener('click', (event) => {
+        event.preventDefault(); // prevent the form from submitting
+        alert(" Ми не приймаємо неробочі пристрої ☹️");
+      });
+    </script>
+  </body>
+</html>
+{% include 'info.html' %}
+{% include 'end_navbar.html' %}
+{% endblock %}
+
+

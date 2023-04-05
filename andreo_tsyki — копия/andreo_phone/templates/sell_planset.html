@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+    <link rel="stylesheet" href="{% static 'css/sell_iphone.css' %}" type="text/css">
+    </head>
+    <body style="width: 100%; margin: 0; padding: 0; overflow-x: hidden; text-decoration: none;">
+        {% include 'navbar.html' %}
+        <div class="sell_iphone_wrapper">
+        <div class="text_1">Продать iPad</div>
+        <div class="text_2">Мы принимаем {{count}} моделей iPad</div>
+        <section class="sell_iphone_wrappe_contaiher">
+            {% for plan in planset %}
+            <div class="sell_iphone_wrappe_contaiher_block">
+                <img class='img_block' src="{{plan.image_planset.url}}"></img>
+                <a class="text" href="{% url 'sell_planset_page' plan.id %}">{{plan.model_produkt}}</a>
+                <div class="price">{{plan.text}} {{plan.max_prise}}₴</div>
+            </div> 
+            {% endfor %}
+        </section>
+    </body>
+</html>
+{% include 'end_navbar.html' %}

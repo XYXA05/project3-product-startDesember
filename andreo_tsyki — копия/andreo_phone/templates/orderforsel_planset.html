@@ -1,0 +1,7 @@
+{% load static %}
+    {% include 'navbar.html' %}
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+    <input type="submit" value="Send">
+    </form>

@@ -1,0 +1,27 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/endnavbar.css' %}" type="text/css">
+<div style="background-image: url('/media/for_site/bacraund@0.5x.jpg')" class="glavhii_div">
+    <div class="endnavbar">
+            <div class="dives">
+            <p class="">Продати</p>
+            <a class="text" href="{% url 'sell_iphone' %}">Продати Смартфон</a>
+            <a class="text" href="{% url 'sell_watch' %}">Продати Годинник</a>
+            <a class="text" href="{% url 'sell_planset' %}">Продати Планшет</a>
+            </div>
+            <div class="dives">
+            <p class="">Сервіси</p>
+            <a class="text" href="{% url 'home' %}">Продати</a>
+            <a class="text" href="">Придбати</a>
+        </div>
+        <div class="dives">
+            <p class="">Додаткове</p>
+            <a class="text" href="">Про нас</a>
+            <a class="text" href="">Контакти</a>
+        </div>
+    </div>
+    <div class="endnavbar2">
+        <div class="end">
+            <img style="width: 163px; height: 75px; display: flex; justify-content: space-evenly; padding: 10px 0px 0px 389px;" src="/media/for_site/ITAO 2.png">
+        </div>
+    </div>
+</div>

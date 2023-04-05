@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+    <link rel="stylesheet" href="{% static 'css/sell_iphone.css' %}" type="text/css">
+    </head>
+    <body style="width: 100%; margin: 0; padding: 0; overflow-x: hidden; text-decoration: none;">
+        {% include 'navbar.html' %}
+        <div class="sell_iphone_wrapper">
+        <div class="text_1">Продать Apple Watch</div>
+        <div class="text_2">Мы принимаем {{count}} моделей Watch</div>
+        <section class="sell_iphone_wrappe_contaiher">
+            {% for watchs in watch %}
+            <div class="sell_iphone_wrappe_contaiher_block">
+                <img class='img_block' src="{{watchs.image_watch.url}}"></img>
+                <a class="text" href="{% url 'sell_watch_page' watchs.id %}">{{watchs.model_produkt}}</a>
+                <div class="price">{{watchs.text}} {{watchs.max_prise}}₴</div>
+            </div> 
+            {% endfor %}
+        </section>
+    </body>
+</html>
+{% include 'end_navbar.html' %}

@@ -1,0 +1,308 @@
+
+*{
+    font-family: 'Mulish', sans-serif;
+}
+.class-info{
+    width: 1340px;
+    height: 620px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0px 0px 0px 100px;
+    background-image: radial-gradient(ellipse at center, rgb(0 0 0), rgb(255 255 255)), none;
+    background-color: #f4f4f4;
+    box-shadow: inset -1px 0px 20px 20px #f4f4f4;
+}
+.left-block{
+    padding-top: 50px;
+    padding-bottom: 90px;
+    width: 25%;
+}
+.right-block{
+    padding: 0px 60px 90px 0px;
+}
+.text-info{
+    font-size: 18px;
+    padding: 10px 0px;
+    border-bottom: 2px solid hsl(0deg 0% 0% / 30%);
+    margin-bottom: 50px;
+    text-align: center;
+}
+.image-info{
+    background-size: cover;
+    height: 620px;
+    animation: pulse 3s infinite;
+}
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+.iphone-50-section{
+    width: 50%;
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    color: #1d1d1f;
+}
+.iphone-50-section-div{
+    width: 50%;
+    margin-bottom: 70px;
+}
+.iphone-50-flex{
+    width: 1364px;
+    height: 635px;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 100px 120px 0px 76px;
+}
+.iphone50{
+    height: auto;
+    width: auto;
+    padding: 120px 0px 0px 0px;
+}
+.text-propoganda{
+    padding-right: 150px;
+}
+.two-images{
+    height: 370px;
+    width: 1360px;
+    margin: 50px 60px;
+    padding: 0px 0px 60px;
+    display: flex;
+}
+
+.two-images-blog{
+    height: 310px;
+    width: 645px;
+    margin-right: 30px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+.imeges{
+    height: 310px;
+    width: 310px;
+    position: absolute;
+}
+.images{
+    height: 300px;
+    width: 226px;
+    position: absolute;
+}
+.images-textx{
+    margin: -305px 30px 0px 0px;
+    padding: 30px 50px 30px 350px;
+}
+.images-text{
+    margin: 0px 30px 0px 0px;
+    padding: 30px 50px 30px 350px;
+}
+.button{
+    all: unset;
+    cursor: pointer;
+    padding: 16px 38px;
+    border: 1px solid #0B940E;
+    color: #0B940E;
+    box-sizing: border-box;
+    margin-bottom: 80px;
+    transition: all .5s ease;
+    border-radius: 30px;
+}
+.button:hover{
+    color: white;
+    background: #0B940E;
+}
+
+@media (max-width:1200px){
+
+    .class-info{
+        width: 1100px;
+    }
+    .image-info{
+        height: 500px;
+        padding: 0px 0px 80px 0px;
+    }
+    .iphone-50-flex{
+        width: 1124px;
+        height: 515px;
+    }
+    .iphone-50-section{
+        padding-top: 0px;
+        height: 200px;
+        width: auto;
+    }
+    .button{
+        margin: -30px 0px 0px 0px;
+    }
+    .two-images{
+        width: 1120px;
+        margin: 50px 30px;
+    }
+}
+@media (max-width:992px){
+    .class-info{
+        width: 892px;
+    }
+    .image-info{
+        height: 450px;
+        padding: 0px 0px 70px 0px;
+    }
+    .left-block{
+        padding-top: 50px;
+        padding-bottom: 90px;
+    }
+    .text-info{
+        font-size: 16px;
+    }
+    .two-images{
+        width: 912px;
+    }
+    .two-images-blog{
+        height: 300px;
+        width: 450px;
+    }
+    .images-textx{
+        padding: 30px 50px 30px 275px;
+    }
+    .images-text{
+        padding: 30px 50px 30px 320px
+    }
+}
+@media (max-width:768px) {
+    .class-info{
+        width: 684px;
+        padding: 0px 60px 0px 34px;
+    }
+    .left-block{
+        padding: 0px 45px 70px 0px;
+    }
+    .right-block{
+        padding: 0px 0px 73px 8px;
+    }
+    .image-info{
+        margin: 10px 10px 28px -27px;
+    }
+    .iphone-50-flex{
+        padding: 0px 0px 0px 30px;
+    }
+    .iphone50{
+        height: auto;
+        width: auto;
+        margin: -97px 0px 0px -150px; 
+    }
+    .two-images{
+        width: 768px;
+    }
+    .imeges{
+        margin: 0px 0px 0px 60px;
+    }
+    .two-images-blog{
+        width: 300px;
+        height: 300px;
+        background-color: #f4f4f4;
+   }
+   .images-textx{
+    padding: 320px 0px 0px 0px;
+   }
+   .images-text{
+    padding: 320px 0px 0px 90px;
+   }
+}
+@media (max-width:570px){
+    .class-info{
+        width: 480px;
+        
+    }
+    .image-info{
+        height: 335px;
+        padding: 0px 0px 150px 0px;
+    }
+    .left-block{
+        padding: 0px 45px 55px 0px;
+    }
+    .right-block{
+        padding: 0px 0px 55px 8px;
+    }
+    .text-info{
+        font-size: 13px;
+    }
+    .iphone-50-flex{
+    padding: 0px 0px 15px 10px;  
+    }
+    .iphone-50-section-div{
+        width: 44%;
+    }
+    .button{
+        margin: -54px 0px 0px 0px;
+    }
+    .iphone50{
+        margin: -126px 0px -15px -172px;
+    }
+    .two-images{
+        display: flow-root;
+        padding: 45px 0px 0px 120px;
+    }
+    .imeges{
+        margin: 45px 0px 0px -50px;
+    }
+    .images-text{
+        padding: 320px 0px 0px 0px;
+    }
+    .images-textx{
+        padding: 300px 0px 0px 0px;
+    }
+    .imegess{
+        padding: 0px 0px 0px 0px;
+    }
+}
+@media (max-width:414px){
+    .class-info{
+        width: 320px;
+        height: 400px;
+    }
+    .image-info{
+        height: 195px;
+    }
+    .text-info{
+        padding: 10px 0px;
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+    .left-block{
+        padding: 0px 55px 35px 0px;
+    }
+    .right-block{
+        padding: 0px 0px 32px 8px;
+    }
+    .image-info{
+        padding: 0px 0px 85px 0px;
+    }
+    .iphone50{
+        display: none;
+    }
+    .iphone-50-section{
+        width: 400px;
+        padding: 0px 679px 0px 0px;
+    }
+    .iphone-50-section-div{
+        width: 50%;
+        margin-bottom: 50px;
+    }
+    .button{
+        margin: -23px 0px 0px -18px;
+    }
+    .text-propoganda{
+        padding-right: 80px;
+    }
+    .two-images{
+        padding: 0px 0px 0px 66px;
+    }
+    
+}

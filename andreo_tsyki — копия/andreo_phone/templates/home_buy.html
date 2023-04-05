@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" type="text/css">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+{% include 'navbar.html' %}
+<body style="width: 100%; margin: 0; padding: 0; overflow-x: hidden;">
+    <div class="glavhaya-setka">
+        <div class="glavhaya-setka1">
+            <div class="glavhaya-setka-image">
+                <a href="{% url 'buy_list_phone' %}" >
+                    <img class="imsge-1" id="img" src="media/for_site/3 set@0.5x@2x.png"></img>
+                <div class="imsge-1-text">
+                    <h1 style="color: black;" >Kypiti Смартфон</h1>
+                    <a style="color: #3dcbb3;" href="{% url 'buy_list_phone' %}" >Перейти></a>
+                </div> 
+                </a> 
+            </div>
+        </div>
+        <div class="divs">
+            <div class="div">
+                <a href="{% url 'buy_list_planset' %}">
+                <img class="imsge-2" src="media/for_site/1 ctek@0.5x@0.5x 2@0.5x.png"></img>
+                <div class="images-textos">
+                    <h1 style="color: black;" >Kypiti Планшет</h1>
+                    <a style="color: #3dcbb3;" href="{% url 'buy_list_planset' %}" >Перейти></a>
+                </div>
+                </a>
+            </div>
+            <div class="div">
+                <a href="{% url 'buy_list_watch' %}">
+                    <img class="imsge-2" src="media/for_site/1 ctek 2 2@0.5x@0.5x.png"></img>
+                    <div class="images-textos">
+                        <h1 style="color: black;" >Kypiti Годинник</h1>
+                        <a style="color: #3dcbb3;" href="{% url 'buy_list_watch' %}">Перейти></a>       
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+    {% include 'end_navbar.html' %}
+</body>
+{% endblock content %}

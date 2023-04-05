@@ -1,0 +1,106 @@
+.div{
+    background-color: #f4f4f4;
+    margin: 26px 60px 60px 60px;
+    border: 2px solid #f4f4f4;
+    filter: drop-shadow(0px 0px 10px rgb(183, 172, 172));
+    display: flex;
+    justify-content: space-around;
+}
+.form-group{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  padding: 12px 0px 0px 0px;
+}
+.name{
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0px 0px 0px 24px;
+}
+.setka{
+    margin: 20px 0px 30px 90px;
+}
+.form-control{
+    all: unset;
+    width: 500px;
+    height: 42px;
+    background-color: #fff;
+    font-size: 14px;
+    padding: 11px;
+    color: rgba(0,0,0,.45);
+    margin-bottom: 11px;
+    border-radius: 30px;
+}
+.form-group1{
+    display: flex;
+    flex-direction: column;
+}
+.file{
+    font-weight: 600;
+    font-size: 16px;
+}
+.form-control-file{
+    padding: 14px 0px 0px 30px;
+    font-weight: 700;
+    width: 300px;
+    height: 50px;
+    background: #0B940E;
+    border-radius: 30px; 
+}
+.btn-primary{
+    all: unset;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 700;
+    width: 300px;
+    height: 50px;
+    border: 2px solid #0B940E;
+    background: #ffffff;
+    color: #0B940E;
+    margin: 45px 0px 0px 90px;
+    border-radius: 30px;  
+}
+.btn-primary:hover{
+    color: #ffffff;
+    background-color: #0B940E;
+}
+@media (max-width:630px) {
+    .form-control{
+        width: 400px;
+    }
+    .setka{
+        margin: 20px 0px 30px 60px;
+    }
+    .btn-primary{
+        margin: 45px 0px 0px 56px;
+    }
+}
+@media (max-width:520px) {
+    .form-control{
+        width: 300px;
+    }
+    .setka{
+        margin: 20px 0px 30px 15px;
+    }
+    .btn-primary{
+        margin: 45px 0px 0px 10px;
+    }
+}
+@media (max-width:414px) {
+    .form-control{
+        width: 230px;
+        padding: 0px 0px 0px 15px;
+        margin: 0px 0px 0px 10px;
+    }
+    .form-control-file{
+        padding: 14px 0px 0px 20px;
+        width: 280px;
+    }
+    .setka{
+        margin: 20px 0px 30px 0px;
+    }
+    .btn-primary{
+        width: 240px;
+        margin: 45px 0px 0px 20px;
+    }
+}

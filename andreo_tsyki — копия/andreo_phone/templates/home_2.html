@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/home_2.css' %}" type="text/css">
+    </head>
+    {% include 'navbar.html' %}
+    <body style="width: 100%; margin: 0; padding: 0; overflow-x: hidden;">
+        <img class="heads" id="img" src="/media/for_site/aple_set2.png" >
+        <div class="section">
+            <div class="title1">ITAO</div>
+            <div class="title2">ITAO - з турботою про клієнта.<br>Великий вибір оригінальної техніки Apple, якісний сервіс і аксесуари.</div>
+            <div id="div" style="display: flex; justify-content: space-evenly;">
+                <form action="{% url 'home_buy' %}">
+                    <button class="button-1">купити</button>
+                </form>
+                <form action="{% url 'home' %}">
+                    <button class="button-1">Продати</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

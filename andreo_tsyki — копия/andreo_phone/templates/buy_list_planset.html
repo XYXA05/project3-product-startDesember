@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+{% load widget_tweaks %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/catolog.css' %}" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.ise').click(function() {
+                    $('.model-field').toggle();
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+                $('.ises').click(function() {
+                    $('.membory').toggle();
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+                $('.isese').click(function() {
+                    $('.color').toggle();
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+                $('.iseses').click(function() {
+                    $('.stan_telefohy').toggle();
+                });
+            });
+        </script>
+    </head>
+    {% include 'navbar.html' %}
+    <body style="width: 100%; margin: 0; padding: 0; overflow-x: hidden;">
+        <div class="section">
+            <form method="get" class="form">
+            <h3 class="h33">ПІДБІР ЗА ПАРАМЕТРАМИ</h3>
+            <div class="diveses">
+                <ul class="ul">
+                    <img class='ise' style="height: 20px; width: 20px;" src="/media/for_site/icon10.png">
+                    {{ filter.form.model|add_label_class:"models" }}
+                    {{ filter.form.model|add_class:"model-field" }}
+                </ul>
+                <ul class="ul">  
+                    <img class='ises' style="height: 20px; width: 20px;" src="/media/for_site/icon10.png">
+                    {{ filter.form.membory|add_label_class:'models' }}
+                    {{ filter.form.membory|add_class:'membory' }}
+                </ul>
+                <ul class="ul">
+                    <img class='isese' style="height: 20px; width: 20px;" src="/media/for_site/icon10.png">
+                    {{ filter.form.color|add_label_class:'models' }}
+                    {{ filter.form.color|add_class:'color' }}
+                </ul>
+                <ul class="ul">
+                    <img class='iseses' style="height: 20px; width: 20px;" src="/media/for_site/icon10.png">
+                    {{ filter.form.stan_telefohy|add_label_class:'models' }}
+                    {{ filter.form.stan_telefohy|add_class:'stan_telefohy' }}
+                </ul>
+                    <button class="button" type="submit">Search</button>
+            </div>
+            </form>
+            {% if filter.qs %}
+                <div class="form_2">
+                    {% for phone in filter.qs %}
+                    <div class="section1">      
+                        <img class="img" src="{{phone.image.url}}">
+                        <div class="model">б/у {{phone.model}} {{phone.color}}</div>
+                        <div class="sztah_price">
+                            <div style="margin: 0px 0px 0px 70px;"> stan :{{phone.stan_telefohy}}</div>
+                            <hr>
+                            <div style="margin: 0px 0px 0px 70px;"> price :{{phone.price}}</div>
+                        </div>
+                        <form action="{% url 'buy_planset' phone.id %}">
+                            <button class="button1">pereiti</button>
+                        </form>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+            {% endif %}
+        </div>
+        
+    <div class="section3">
+        {% for page in paginator.page_range %}
+            <a class="btn btn--primary" href="?page={{page}}&limit={{limit}}">{{page}}</a>
+        {% endfor %}
+    </div>
+    </body>
+    {% include 'end_navbar.html' %}
+</html>
+{% endblock content %}

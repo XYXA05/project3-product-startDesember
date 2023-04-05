@@ -1,0 +1,77 @@
+.heads{
+    width: auto;
+}
+.title1{
+    font-size: 90px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.39;
+    letter-spacing: 1.6px;
+    text-align: left;
+    padding: 0px 0px 0px 180px;
+}
+.title2{
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.94;
+    letter-spacing: normal;
+    text-align: center;
+    padding: 0px 20px 10px 0px;
+}
+.button-1{
+    cursor: pointer;
+    width: 232px;
+    border-radius: 3px;
+    border: solid 2px #ffffff;
+    padding: 15px;
+    text-align: center;
+    font-family: HelveticaNeue;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: 0.9px;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: 0.4s;
+    background-color: rgba(28,28,28,0)
+}
+.button-1:hover{
+    color: #ffffff;
+    background-color: #0B940E;
+}
+.section{
+    color: white;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 50px 0px 0px 0px;
+    text-align: -webkit-center;
+    width: 600px;
+}
+@media (max-width:450px) {
+    #img{
+        content: url('/media/for_site/aple_set3.png');
+    }
+    .heads{
+        width: inherit;
+        height: inherit;
+    }
+    .section{
+        width: 343px;
+    }
+    .title1{
+        padding: 0px 0px 0px 55px;
+    }
+    .button-1{
+        width: 160px;
+    }
+    #div{
+        margin: 0px -23px 0px -27px;
+    }
+}

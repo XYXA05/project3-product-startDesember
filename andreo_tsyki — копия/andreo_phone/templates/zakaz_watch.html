@@ -1,0 +1,68 @@
+{% load static %}
+{% block content %}
+{% load widget_tweaks %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/zakaz.css' %}" type="text/css">
+</head>
+{% include 'navbar.html' %}
+<body>
+    <div class="flex">
+        <form class="section" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h1 class="texts">Контактная информация</h1>
+            <div class="forms">
+            {{form.name|add_class:'form'}}
+            </div>
+            <div class="forms">
+            {{form.famili|add_class:'form'}}
+            </div>
+            <div class="forms">
+            {{form.mail|add_class:'form'}}
+            </div>
+            <div class="forms">
+            {% render_field  form.phone placeholder='+38093198863456' class='form' %}
+            </div>
+            <div class="form3">
+            <h1 class="texts">Доставка и оплата</h1>
+            <div class="sposob"> sposob dostavki {% render_field form.sposob_dostavki class='' %}</div>
+            {{form.gorod|add_class:'form'}}  
+            {{form.nomber_viddilehha|add_class:'form'}}
+            <div class="sposob">sposob oplati {% render_field form.sposob_oplati class='' %}</div>
+            <button class="button" type="submit"> zakazat</button>
+            </div>
+        </form>
+        <div class="section1">
+            {% for watchs in watch %}
+            <hr>    
+            <div class="texttes">
+                <img style="height: 125px; width: 125px; padding: 15px 0px 0px 0px;" src="{{watchs.image.url}}">
+                <div class="titlese">{{watchs.model}} {{watchs.membory}} ({{watchs.color}}) ({{watchs.stan_telefohy}})</div>
+            </div>
+            <hr>
+            <div class="price">Сумма Вашего заказа: {{watchs.price}}</div>
+            <hr>
+            {% endfor %}
+        </div>
+    </div>
+    <script type="text/javascript">
+        window.addEventListener("DOMContentLoaded", function() {
+            var deliveryField = document.getElementById("id_sposob_dostavki");
+            var cityField = document.getElementById("id_gorod");
+            var branchField = document.getElementById("id_nomber_viddilehha");
+            function updatePlaceholders() {
+            if (deliveryField.value === "delivery") {
+                cityField.placeholder = "vas rayoh";
+                branchField.placeholder = "vasa ylitsa";
+            } else {
+                cityField.placeholder = "vas gorod";
+                branchField.placeholder = "nomer vidileha";
+            }
+        }
+        
+        deliveryField.addEventListener("change", updatePlaceholders);
+        updatePlaceholders();
+    });
+</script>
+{% include 'end_navbar.html' %}
+</body>
+{% endblock %}
